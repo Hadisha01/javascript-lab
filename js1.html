@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<script type="text/javascript">
+		
+		function add(){
+			
+		var a= document.getElementById('val1').value;
+      var b=  document.getElementById('val2').value;
+       a = Number(a);
+       b = Number(b);
+			document.getElementById('p1').innerHTML= a+b;
+		}
+
+		function sub(){
+			
+		var a= document.getElementById('val1').value;
+      var b=  document.getElementById('val2').value;
+       a = Number(a);
+       b = Number(b);
+			document.getElementById('p2').innerHTML= a-b;
+		}
+
+
+		function mul(){
+			
+		var a= document.getElementById('val1').value;
+      var b=  document.getElementById('val2').value;
+       a = Number(a);
+       b = Number(b);
+document.getElementById('p3').innerHTML= a*b;		}
+
+
+		function div(){
+			
+		var a= document.getElementById('val1').value;
+      var b=  document.getElementById('val2').value;
+       a = Number(a);
+       b = Number(b);
+			document.getElementById('p4').innerHTML= a/b;
+		}
+	</script>
+</head>
+<body>
+	First NO:<input type="text" name="value1" placeholder="first value" id="val1"><br>
+	Second No:<input type="text" name="value2" placeholder="second value" id="val2"><br>
+	<br>
+	<br>
+	
+	<button type="button"  onclick="add()" > add</button>
+	<button type="button"  onclick="sub()" > sub</button>
+	<button type="button"  onclick="mul()" > mul</button>
+	<button type="button"  onclick="div()" > div</button>
+    
+	<p>ADDITION=<b id="p1"></b></p>
+		<p>SUBSTRACTION=<b id="p2"></b></p>
+	<p>MULTIPLICATION=<b id="p3"></b></p>
+
+		<p>DIVITION=<b id="p4"></b></p>
+
+
+	
+
+
+</body>
+</html>
