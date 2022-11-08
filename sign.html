@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sign up</title>
+	<script type="text/javascript">
+		function Validate(){
+			var name = document.getElementById("name").value;
+			var email = document.getElementById("email").value;
+			var phone = document.getElementById("phone").value;
+			var patt1 = /\d/g;
+            
+            var password = document.getElementById("password").value;
+            var atpos = email.indexOf("@");
+            var dotpos = email.lastIndexOf(".");
+ 
+
+			if(name==""  || name.length<3 || name.match(patt1)) {
+				document.getElementById("p1").innerHTML = "**must have name.name conatin 3 charecter in length and digit are not allowed.**"
+				document.f1.name.focus();
+				return false;
+			}
+			if (email=="" || atpos < 1 || ( dotpos - atpos < 2 ) ) {
+				
+			   document.getElementById("p2").innerHTML = "**please enter valid email!!**"
+
+				document.f1.email.focus();
+				return false;
+			}
+			if(phone=="" || isNaN(phone) || phone.length!=10) {
+				
+				document.getElementById("p3").innerHTML = "** must have Phone number.they conatin 10 charecter in length.  **"
+			
+				document.f1.phone.focus();
+				return false;
+			}
+			if(password=="" || password.length<6 ) {
+				
+				document.getElementById("p4").innerHTML = "**password must have 6 charecter in length**"
+
+				document.f1.password.focus();
+				return false;
+			}
+			
+
+
+
+		}
+	</script>
+	<style type="text/css">
+		body{
+			background-color: gray;
+		}
+		div{
+			border:1px solid gray;
+			margin:150px 430px;
+			height: 450px;
+			text-align: center;
+			color: white;
+			background-color: black;
+		}
+		span{
+			color: red;
+		}
+		input{
+			margin-top: 8px;
+			width: 300px;
+			height: 30px;
+			border-radius: 5px;
+			background-color: gray;
+
+		}
+		button{
+			margin-top: 15px;
+			color: white;
+			background-color: gray;
+		    height: 30px;
+			width: 100px;
+			border-radius: 6px;
+
+
+		}
+	</style>
+</head>
+<body>
+	<div>
+<form action="" name="f1" method="POST" onsubmit="return Validate()">
+	<h1>sign in</h1>
+	<label>name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="text" name="name" id="name"><br>
+	<span id="p1"></span><br>
+	<label>email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="text" name="email" id="email"><br>
+		<span id="p2"></span><br>
+
+
+	<label>phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="text" name="phone" id="phone"><br>
+			<span id="p3"></span><br>
+
+	<label>password</label>&nbsp;&nbsp;&nbsp;
+	<input type="password" name="password" id="password"><br>
+			<span id="p4"></span><br>
+
+
+	<button type="submit"><b>Sign in</b></button>
+
+</form>
+</div>
+</body>
+</html>
